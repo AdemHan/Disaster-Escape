@@ -6,6 +6,12 @@ public class Zemin : MonoBehaviour
 {
     public float zıplamaKuvveti;
     public bool zemineTemasEdildi;
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     //Sert temas oldugu durumlarda oncollison enter kullanilir. İcinden gecme durumlarinda on trigger enter kullanilir.
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,6 +31,9 @@ public class Zemin : MonoBehaviour
                     Yonetici.skorSayisi++;      //skor sayisi bir artar
                     zemineTemasEdildi = true;   //Ayni zeminde birden kez ziplarsa puan almasin diye true yapildi
                 }
+
+                anim.SetBool("TemasEdildi", true);
+                Destroy(gameObject, 1f);
             }
         }
     }
