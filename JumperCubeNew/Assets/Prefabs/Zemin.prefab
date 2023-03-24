@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6180456157692684791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.99, z: 0}
-  m_LocalScale: {x: 0.95711946, y: 1.0782832, z: 0}
+  m_LocalScale: {x: 1.046485, y: 1.0991216, z: 0}
   m_Children:
   - {fileID: 1920901719896220235}
   m_Father: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "z\u0131plamaKuvveti": 16
+  zemineTemasEdildi: 0
 --- !u!251 &6180456157692684784
 PlatformEffector2D:
   m_ObjectHideFlags: 0

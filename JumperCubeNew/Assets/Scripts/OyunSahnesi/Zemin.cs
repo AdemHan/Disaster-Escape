@@ -5,6 +5,7 @@ using UnityEngine;
 public class Zemin : MonoBehaviour
 {
     public float zıplamaKuvveti;
+    public bool zemineTemasEdildi;
 
     //Sert temas oldugu durumlarda oncollison enter kullanilir. İcinden gecme durumlarinda on trigger enter kullanilir.
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,6 +19,12 @@ public class Zemin : MonoBehaviour
                 Vector2 zıplamaVelocity = rb.velocity;
                 zıplamaVelocity.y = zıplamaKuvveti;
                 rb.velocity = zıplamaVelocity;
+
+                if (zemineTemasEdildi == false)  //zemine temas edilince
+                {
+                    Yonetici.skorSayisi++;      //skor sayisi bir artar
+                    zemineTemasEdildi = true;   //Ayni zeminde birden kez ziplarsa puan almasin diye true yapildi
+                }
             }
         }
     }
