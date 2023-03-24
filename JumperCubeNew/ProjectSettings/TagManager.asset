@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Arkaplan
+    uniqueID: 4005854657
+    locked: 0
+  - name: Zemin
+    uniqueID: 3034669149
+    locked: 0
+  - name: Karakter
+    uniqueID: 2532834649
+    locked: 0
+  - name: Canvas
+    uniqueID: 3406455035
+    locked: 0
+  - name: "PngL\u0131ght"
+    uniqueID: 3590558095
+    locked: 0
