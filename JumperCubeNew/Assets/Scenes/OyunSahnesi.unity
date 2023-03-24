@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zemin: {fileID: 6180456157692684791, guid: 9283af4a64afc774eb40b2586c0dd2b3, type: 3}
-  zeminSayisi: 10
+  zeminSayisi: 100
   zeminGenislik: 3.5
   minimumY: 2.7
   maksimumY: 2.9

@@ -6,11 +6,24 @@ public class Zemin : MonoBehaviour
 {
     public float zıplamaKuvveti;
     public bool zemineTemasEdildi;
+    int zıplatanZeminIhtimali;
     Animator anim;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        zıplatanZeminIhtimali = Random.Range(1, 11); //zıplatan zeminin ne kadar zeminde bir olmasini istiyorsak random degerler uretmek icin 1 ile 11 arasında deger alsin dedik. 1 dahil ama 11 dahil degil.
+
+        if (zıplatanZeminIhtimali == 1)  // bu ihtimalin gerceklesme sansi 10 da birdir.
+        {
+            anim.SetBool("ZıplatanZemin", true);  // eger bu sans gerceklesirse Animatordaki ZıplatanZemin aktif olur
+            zıplamaKuvveti = 20f;
+            
+        }
+        else
+        {
+            zıplamaKuvveti = 14f;
+        }
     }
 
     //Sert temas oldugu durumlarda oncollison enter kullanilir. İcinden gecme durumlarinda on trigger enter kullanilir.
